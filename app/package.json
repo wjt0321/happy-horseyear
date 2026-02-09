@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "postbuild": "chmod -R a+rX dist",
+    "postbuild": "node -e \"if(process.platform!=='win32'){require('child_process').execSync('chmod -R a+rX dist',{stdio:'inherit'})}\"",
     "lint": "eslint .",
     "preview": "vite preview"
   },

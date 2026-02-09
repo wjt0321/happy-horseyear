@@ -2,5 +2,6 @@ app/node_modules/
 app/dist/
 app/.vite/
 app/.eslintcache
+.wrangler-out/
 *.log
 .DS_Store

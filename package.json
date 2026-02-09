@@ -1,0 +1,8 @@
+{
+  "name": "happy-horseyear-root",
+  "private": true,
+  "scripts": {
+    "build": "npm --prefix app ci && npm --prefix app run build",
+    "deploy:cloudflare": "npm run build && npx wrangler deploy"
+  }
+}
