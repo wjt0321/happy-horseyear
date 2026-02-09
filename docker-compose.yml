@@ -1,0 +1,10 @@
+services:
+  horse-newyear-unified-web:
+    image: nginx:alpine
+    container_name: horse-newyear-unified-web
+    restart: unless-stopped
+    ports:
+      - "4174:80"
+    volumes:
+      - ./app/dist:/usr/share/nginx/html:ro
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
